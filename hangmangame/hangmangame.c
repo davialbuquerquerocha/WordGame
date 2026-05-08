@@ -4,6 +4,13 @@
 
 int lifes = 5;
 char a[1];
+
+void rightletter(char* rw, char* wb, int p){
+    index(strcspn(wb + p + 1));
+    if(index != strlen(wb)){
+        
+    }
+}
 void verification(char* rw, char* wb){
 
     if(lifes == 0){
@@ -18,8 +25,11 @@ void verification(char* rw, char* wb){
         printf("%s\n", wb);
         printf("wrong letter, %d more lifes left\n", lifes);
     } else {
-        wb[strcspn(rw, a)] = a[0];
+        int p = strcspn(rw, a); 
+        wb[p] = a[0];
+        rightletter(rw, wb, p);
         printf("%s\n", wb);
+        
 
         if(strcspn(wb, "-") == strlen(wb)){
             printf("CONGRATULATION, YOU WON!\n");
