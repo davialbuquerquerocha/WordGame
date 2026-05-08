@@ -6,9 +6,12 @@ int lifes = 5;
 char a[1];
 
 void rightletter(char* rw, char* wb, int p){
-    index(strcspn(wb + p + 1));
+    int index = strcspn(wb + p, a);
+    index = index + p;
     if(index != strlen(wb)){
-        
+        wb[index] = a[0];
+        printf("%s\n", wb);
+        rightletter(rw, wb, index);
     }
 }
 void verification(char* rw, char* wb){
@@ -17,7 +20,7 @@ void verification(char* rw, char* wb){
         printf("GAME OVER\n");
         return;
     }
-// it's prohibiten to compute at this line
+
     scanf(" %c", a);
 
     if(strcspn(rw, a) == strlen(rw)){
