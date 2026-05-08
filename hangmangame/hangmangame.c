@@ -10,9 +10,8 @@ void verification(char* rw, char* wb){
         printf("GAME OVER\n");
         return;
     }
-    printf("tete\n");
 // it's prohibiten to compute at this line
-    scanf("%c", a);
+    scanf(" %c", a);
 
     if(strcspn(rw, a) == strlen(rw)){
         lifes--;
