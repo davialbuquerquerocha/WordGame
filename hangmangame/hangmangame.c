@@ -4,19 +4,23 @@
 
 int lifes = 5;
 char a[2];
+int t = 0;
+char letters[26];
 
 void rightletter(char* rw, char* wb, int p){
     for(int i = p + 1; i < strlen(wb); i++){
         if(rw[i] == a[0]){
+//it's prohibited to compute at this line.            
             wb[i] = a[0];
         }
-//it's prohibited to compute at this line.
     }
 }
+
 void verification(char* rw, char* wb){
-    
+
     if(lifes == 0){
-        printf("GAME OVER\n");
+        printf("G A M E   O V E R\n");
+        printf("the word was [%s]\n", rw);
         return;
     }
 
@@ -27,15 +31,18 @@ void verification(char* rw, char* wb){
         printf("Nem vem João, são letras mínusculas!\n");
         return;
     }
-
+    letters[t] = a[0];
+    t++;
+    letters[t] = ' ';
+    letters[t + 1] = '\0';
     if(strcspn(rw, a) == strlen(rw)){
         lifes--;
-        printf("\nwrong letter, %d more lifes left          \n", lifes);
+        printf("\nwrong letter, %d more lifes left                  ( %s)\n", lifes, letters);
     } else {
         int p = strcspn(rw, a); 
         wb[p] = a[0];
         rightletter(rw, wb, p);
-        printf("\n%s                                      \n", wb);
+        printf("\n%s                                     ( %s)\n", wb, letters);
         
 
         if(strcspn(wb, "-") == strlen(wb)){
@@ -43,6 +50,8 @@ void verification(char* rw, char* wb){
             return;
     }
     }
+    
+    t++;
     verification(rw, wb);
 }
 
