@@ -28,7 +28,7 @@ void verification(char* rw, char* wb){
     while(getchar() != '\n');
 
     if(a[0] > 122 || a[0] < 97){
-        printf("Nem vem João, são letras mínusculas!\n");
+        printf("Nem vem Rademaker, são letras mínusculas!\n");
         return;
     }
     letters[t] = a[0];
