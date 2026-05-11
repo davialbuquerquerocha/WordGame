@@ -46,7 +46,7 @@ void verification(char* rw, char* wb){
         
 
         if(strcspn(wb, "-") == strlen(wb)){
-            printf("CONGRATULATION, YOU WON!\n");
+            printf("\nCONGRATULATION, YOU WON!        %d wrong letters\n", 5 - lifes);
             return;
     }
     }
@@ -82,7 +82,7 @@ int main(int argc, char* argv[]){
     }
     wordbox[(int)size] = '\0';
 
-    printf("Find out the word:\n");
+    printf("Welcome to HANGMAN GAME\n Enter only lowercase letters to figure out the word:\n");
     printf("%s\n", wordbox);
     verification(rightword, wordbox);
     
