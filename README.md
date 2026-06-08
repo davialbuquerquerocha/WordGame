@@ -11,3 +11,8 @@
 - you have 5 lifes;
 - losing all 5 lifes it's game over;
 - if accerting all letter its game won. 
+
+# How to execute:
+
+> after compilating, call the executable with a txt archive from directory.
+### OBS: the mistery word is on the txt archive, so don't look.
