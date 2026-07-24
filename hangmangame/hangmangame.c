@@ -21,7 +21,7 @@ void verification(char* rw, char* wb, char man[]){
 
     if(lifes == 0){
         man[30] = '\\';
-        printf("%s", man);
+        printf("%s______\n", man);
         printf("\nG A M E   O V E R\n");
         printf("the word was [%s]\n", rw);
         return;
@@ -53,6 +53,7 @@ void verification(char* rw, char* wb, char man[]){
 
         printf("%s", man);
         printf("\nwrong letter, %d more lifes left                  ( %s)\n", lifes, letters);
+        printf("%s\n", wb);
 
     } else {
         int p = strcspn(rw, a); 
@@ -74,7 +75,7 @@ void verification(char* rw, char* wb, char man[]){
 
 int main(int argc, char* argv[]){
 
-    char man[33] = "______\n|     O\n|       \n|     "; // 20 21 22 29 30
+    char man[35] = "______\n|     O\n|       \n|      \n|"; // 20 21 22 29 30
 
     if(argc != 2){
         printf("usage ./a.out [file]\n");
