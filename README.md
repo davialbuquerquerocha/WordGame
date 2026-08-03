@@ -16,3 +16,9 @@
 
 > after compilating, call the executable with a txt archive from directory.
 ### OBS: the mistery word is on the txt archive, so don't look.
+
+______
+|     O
+|    /|\
+|    / \
+|
